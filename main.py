@@ -1,6 +1,8 @@
 import os
-
 from dotenv import load_dotenv
+# Load workspace directory from environment variable or set path here
+WORKSPACE_DIR = os.getenv("WORKSPACE_DIR")
+os.environ["WORKSPACE_DIR"] = WORKSPACE_DIR
 from loguru import logger
 from swarm_models import OpenAIChat
 
